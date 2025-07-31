@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_tools",
+  "info": {
+    "singularName": "ai-tool",
+    "pluralName": "ai-tools",
+    "displayName": "Ai Tool"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "Statis": {
+      "type": "enumeration",
+      "enum": [
+        "Free",
+        "Freemium ",
+        "paid ",
+        "Free for Individuals"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "about": {
+      "type": "blocks"
+    },
+    "features": {
+      "type": "blocks"
+    },
+    "benefits": {
+      "type": "blocks"
+    },
+    "drawbacks": {
+      "type": "blocks"
+    },
+    "ai_tools_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ai-tools-category.ai-tools-category",
+      "inversedBy": "ai_tools"
+    },
+    "ai_tools_tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ai-tools-tag.ai-tools-tag",
+      "mappedBy": "ai_tool"
+    }
+  }
+}

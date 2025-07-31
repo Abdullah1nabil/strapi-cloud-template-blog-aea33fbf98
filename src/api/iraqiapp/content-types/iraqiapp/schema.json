@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "iraqiapps",
+  "info": {
+    "singularName": "iraqiapp",
+    "pluralName": "iraqiapps",
+    "displayName": "iraqi app"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "about": {
+      "type": "string"
+    },
+    "googleplay": {
+      "type": "string"
+    },
+    "appstore": {
+      "type": "string"
+    },
+    "iraqi_app_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::iraqi-app-category.iraqi-app-category",
+      "inversedBy": "iraqi_apps"
+    }
+  }
+}

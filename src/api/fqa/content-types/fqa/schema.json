@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fqas",
+  "info": {
+    "singularName": "fqa",
+    "pluralName": "fqas",
+    "displayName": "FQA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "text"
+    },
+    "exhibitions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::exhibition.exhibition",
+      "inversedBy": "fqas"
+    }
+  }
+}

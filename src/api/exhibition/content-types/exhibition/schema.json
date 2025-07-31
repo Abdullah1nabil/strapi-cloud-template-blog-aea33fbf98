@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exhibitions",
+  "info": {
+    "singularName": "exhibition",
+    "pluralName": "exhibitions",
+    "displayName": "Exhibition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imagCover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "locatoin": {
+      "type": "string"
+    },
+    "aboutSubtitle": {
+      "type": "blocks"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "targetTitle": {
+      "type": "string"
+    },
+    "venueTitle": {
+      "type": "string"
+    },
+    "hours": {
+      "type": "string"
+    },
+    "galleryimage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "fqas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fqa.fqa",
+      "mappedBy": "exhibitions"
+    }
+  }
+}
